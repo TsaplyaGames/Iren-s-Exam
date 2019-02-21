@@ -1,8 +1,20 @@
 init 1 python:  
     
-    final_answer = False
-    correct_answer = False
-    first_try = True
+    orig_questions = ["By which birds did the Hobbits came back from the Doom Mountain?", "Who kidnapped children in Stephen King's 'It'?",
+                      "What nickname Barbridge From 'Roadside Picnic' had?", "On which side Anton Gorodetskiy was?", "Who Tyler Derden from the 'Fight Club' was?",
+                      "What's name of main character in 'Metro' cycle of Dmitriy Gluhovskiy", "Which of the gods do serve faceless from 'Song of Ice and Fire'?",
+                      "What's name of the main character Stephen King's 'Dark Tower'?", "What's name of 'Witcher's' monster, that can transform into different appearances?",
+                      "What monster was hidden in Hogwarts?", "What's surname of 'Dead souls' main character?", "How namy people did Raskolnikov killed?",
+                      "Where do Ctulhu sleeps?", "In which county do happen book series about Carlson?", "What military conflict described in 'Gone by the wind'?",
+                      "On which street did Sherlock Holmes lived?", "What was Voland's cat name?", "What is Turgenev's novel called, where described generation's conflict?",
+                      "How many main characters was in 'Three musketeers' novel?", "What do Little Prince asked main character of eponymous book to draw?"] 
+                 
+    answers = ["By hawks", "By eagles", "By parrots", "Acrobat", "Magician", "Clown", "Vulture", "Griffin", "Condor", "The dark", "The light", "The twilight",
+               "Hallucination", "Real person", "The second personality of the main character", "Arthur", "Artyom", "Andrey", "Rglor", "The Seven", "Many-Faced God",
+               "Roland", "Ralph", "Richard", "Mimic", "Doppler", "Rakshasa", "Anaconda", "Basilisk", "Cassava", "Chichikov", "Aprsakin", "Karamazow", "1", "2", "3",
+               "Mediterranean sea", "Lochness", "Pacific ocean", "Russia", "Sweden", "Iceland", "American civil war", "War for independence", "Second world war",
+               "Oxford street", "Piccadilly", "Baker street", "Lucky", "Behemoth", "Elephant", "Noble Nests", "Fathers and children", "Smoke", "Four", "Three",
+               "One", "Boa", "Elephant", "Lamb"]
     
     reactions_on_correct_answer = ['Attaboy', 'You are so clever...', 'Hm… Well done', 'You are so well-read...', 'Wow! You know even this!', 'Exactly!',
                                     'You can\'t be fooled!', 'Keep it up!', 'Excellent! I love well-read guys...', 'You are not fool!', 'Divinely!', 'Perfect!'
@@ -12,94 +24,6 @@ init 1 python:
                                      'How is it possible not to know it?', 'Are you serious? Wrong!', 'Well-read - it is not about you', 
                                      'You know, girls love clever guys?', 'Epic fail...', 'You are really too lazy even to listen audiobooks?',
                                      'Ha-ha-ha… well well...', 'What for do I gift you books on your birthday?', 'So big, but your mind is like bread’s one...']
-    
-    def create_questions():
-        global questions
-        questions = []
-        questions.append("By which birds did the Hobbits came back from the Doom Mountain?")
-        questions.append("Who kidnapped children in Stephen King's 'It'?")
-        questions.append("What nickname Barbridge From 'Roadside Picnic' had?")
-        questions.append("On which side Anton Gorodetskiy was?")
-        questions.append("Who Tyler Derden from the 'Fight Club' was?")
-        questions.append("What's name of main character in 'Metro' cycle of Dmitriy Gluhovskiy")
-        questions.append("Which of the gods do serve faceless from 'Song of Ice and Fire'?")
-        questions.append("What's name of the main character Stephen King's 'Dark Tower'?")
-        questions.append("What's name of 'Witcher's' monster, that can transform into different appearances?")
-        questions.append("What monster was hidden in Hogwarts?")
-        questions.append("What's surname of 'Dead souls' main character?")
-        questions.append("How namy people did Raskolnikov killed?")
-        questions.append("Where do Ctulhu sleeps?")
-        questions.append("In which county do happen book series about Carlson?")
-        questions.append("What military conflict described in 'Gone by the wind'?")
-        questions.append("On which street did Sherlock Holmes lived?")
-        questions.append("What was Voland's cat name?")
-        questions.append("What is Turgenev's novel called, where described generation's conflict?")
-        questions.append("How many main characters was in 'Three musketeers' novel?")
-        questions.append("What do Little Prince asked main character of eponymous book to draw?")
-        
-    def create_answers():
-        global answers
-        answers = []
-        answers.append("By hawks")
-        answers.append("By eagles")
-        answers.append("By parrots")
-        answers.append("Acrobat")
-        answers.append("Magician")
-        answers.append("Clown")
-        answers.append("Vulture")
-        answers.append("Griffin")
-        answers.append("Condor")
-        answers.append("The dark")
-        answers.append("The light")
-        answers.append("The twilight")
-        answers.append("Hallucination")
-        answers.append("Real person")
-        answers.append("The second personality of the main character")
-        answers.append("Arthur")
-        answers.append("Artyom")
-        answers.append("Andrey")
-        answers.append("Rglor")
-        answers.append("The Seven")
-        answers.append("Many-Faced God")
-        answers.append("Roland")
-        answers.append("Ralph")
-        answers.append("Richard")
-        answers.append("Mimic")
-        answers.append("Doppler")
-        answers.append("Rakshasa")
-        answers.append("Anaconda")
-        answers.append("Basilisk")
-        answers.append("Cassava")
-        answers.append("Chichikov")
-        answers.append("Aprsakin")
-        answers.append("Karamazow")
-        answers.append("1")
-        answers.append("2")
-        answers.append("3")
-        answers.append("Mediterranean sea")
-        answers.append("Lochness")
-        answers.append("Pacific ocean")
-        answers.append("Russia")
-        answers.append("Sweden")
-        answers.append("Iceland")
-        answers.append("American civil war")
-        answers.append("War for independence")
-        answers.append("Second world war")
-        answers.append("Oxford street")
-        answers.append("Piccadilly")
-        answers.append("Baker street")
-        answers.append("Lucky")
-        answers.append("Behemoth")
-        answers.append("Elephant")
-        answers.append("Noble Nests")
-        answers.append("Fathers and children")
-        answers.append("Smoke")
-        answers.append("Four")
-        answers.append("Three")
-        answers.append("One")
-        answers.append("Boa")
-        answers.append("Elephant")
-        answers.append("Lamb")
         
     def choice_question():
         global questions
@@ -113,90 +37,50 @@ init 1 python:
         global answer1
         global answer2
         global answer3
-        if question == "By which birds did the Hobbits came back from the Doom Mountain?":
-            answer1 = answers[0]
-            answer2 = answers[1]
-            answer3 = answers[2]
-        elif question == "Who kidnapped children in Stephen King's 'It'?":
-            answer1 = answers[3]
-            answer2 = answers[4]
-            answer3 = answers[5]
-        elif question == "What nickname Barbridge From 'Roadside Picnic' had?":
-            answer1 = answers[6]
-            answer2 = answers[7]
-            answer3 = answers[8]
-        elif question == "On which side Anton Gorodetskiy was?":
-            answer1 = answers[9]
-            answer2 = answers[10]
-            answer3 = answers[11]
-        elif question == "Who Tyler Derden from the 'Fight Club' was?":
-            answer1 = answers[12]
-            answer2 = answers[13]
-            answer3 = answers[14]
-        elif question == "What's name of main character in 'Metro' cycle of Dmitriy Gluhovskiy":
-            answer1 = answers[15]
-            answer2 = answers[16]
-            answer3 = answers[17]
-        elif question == "Which of the gods do serve faceless from 'Song of Ice and Fire'?":
-            answer1 = answers[18]
-            answer2 = answers[19]
-            answer3 = answers[20]
-        elif question == "What's name of the main character Stephen King's 'Dark Tower'?":
-            answer1 = answers[21]
-            answer2 = answers[22]
-            answer3 = answers[23]
-        elif question == "What's name of 'Witcher's' monster, that can transform into different appearances?":
-            answer1 = answers[24]
-            answer2 = answers[25]
-            answer3 = answers[26]
-        elif question == "What monster was hidden in Hogwarts?":
-            answer1 = answers[27]
-            answer2 = answers[28]
-            answer3 = answers[29]
-        elif question == "What's surname of 'Dead souls' main character?":
-            answer1 = answers[30]
-            answer2 = answers[31]
-            answer3 = answers[32]
-        elif question == "How namy people did Raskolnikov killed?":
-            answer1 = answers[33]
-            answer2 = answers[34]
-            answer3 = answers[35]
-        elif question == "Where do Ctulhu sleeps?":
-            answer1 = answers[36]
-            answer2 = answers[37]
-            answer3 = answers[38]
-        elif question == "In which county do happen book series about Carlson?":
-            answer1 = answers[39]
-            answer2 = answers[40]
-            answer3 = answers[41]
-        elif question == "What military conflict described in 'Gone by the wind'?":
-            answer1 = answers[42]
-            answer2 = answers[43]
-            answer3 = answers[44]
-        elif question == "On which street did Sherlock Holmes lived?":
-            answer1 = answers[45]
-            answer2 = answers[46]
-            answer3 = answers[47]
-        elif question == "What was Voland's cat name?":
-            answer1 = answers[48]
-            answer2 = answers[49]
-            answer3 = answers[50]
-        elif question == "What is Turgenev's novel called, where described generation's conflict?":
-            answer1 = answers[51]
-            answer2 = answers[52]
-            answer3 = answers[53]
-        elif question == "How many main characters was in 'Three musketeers' novel?":
-            answer1 = answers[54]
-            answer2 = answers[55]
-            answer3 = answers[56]
-        elif question == "What do Little Prince asked main character of eponymous book to draw?":
-            answer1 = answers[57]
-            answer2 = answers[58]
-            answer3 = answers[59]
+        if question == orig_questions[0]:
+            answer1, answer2, answer3 = answers[0], answers[1], answers[2]
+        elif question == orig_questions[1]:
+            answer1, answer2, answer3 = answers[3], answers[4], answers[5]
+        elif question == orig_questions[2]:
+            answer1, answer2, answer3 = answers[6], answers[7], answers[8]
+        elif question == orig_questions[3]:
+            answer1, answer2, answer3 = answers[9], answers[10], answers[11]
+        elif question == orig_questions[4]:
+            answer1, answer2, answer3 = answers[12], answers[13], answers[14]
+        elif question == orig_questions[5]:
+            answer1, answer2, answer3 = answers[15], answers[16], answers[17]
+        elif question == orig_questions[6]:
+            answer1, answer2, answer3 = answers[18], answers[19], answers[20]
+        elif question == orig_questions[7]:
+            answer1, answer2, answer3 = answers[21], answers[22], answers[23]
+        elif question == orig_questions[8]:
+            answer1, answer2, answer3 = answers[24], answers[25], answers[26]
+        elif question == orig_questions[9]:
+            answer1, answer2, answer3 = answers[27], answers[28], answers[29]
+        elif question == orig_questions[10]:
+            answer1, answer2, answer3 = answers[30], answers[31], answers[32]
+        elif question == orig_questions[11]:
+            answer1, answer2, answer3 = answers[33], answers[34], answers[35]
+        elif question == orig_questions[12]:
+            answer1, answer2, answer3 = answers[36], answers[37], answers[38]
+        elif question == orig_questions[13]:
+            answer1, answer2, answer3 = answers[39], answers[40], answers[41]
+        elif question == orig_questions[14]:
+            answer1, answer2, answer3 = answers[42], answers[43], answers[44]
+        elif question == orig_questions[15]:
+            answer1, answer2, answer3 = answers[45], answers[46], answers[47]
+        elif question == orig_questions[16]:
+            answer1, answer2, answer3 = answers[48], answers[49], answers[50]
+        elif question == orig_questions[17]:
+            answer1, answer2, answer3 = answers[51], answers[52], answers[53]
+        elif question == orig_questions[18]:
+            answer1, answer2, answer3 = answers[54], answers[55], answers[56]
+        elif question == orig_questions[19]:
+            answer1, answer2, answer3 = answers[57], answers[58], answers[59]
             
 label check_answers:
-    if question == "By which birds did the Hobbits came back from the Doom Mountain?":
-        if final_answer == "By eagles":
+    if question == orig_questions[0]:
+        if final_answer == answers[1]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -206,8 +90,8 @@ label check_answers:
         else:
             $ first_try = False
             return 
-    elif question == "Who kidnapped children in Stephen King's 'It'?":
-        if final_answer == "Clown":
+    elif question == orig_questions[1]:
+        if final_answer == answers[5]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -217,8 +101,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "What nickname Barbridge From 'Roadside Picnic' had?":
-        if final_answer == "Vulture":
+    elif question == orig_questions[2]:
+        if final_answer == answers[6]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -228,8 +112,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "On which side Anton Gorodetskiy was?":
-        if final_answer == "The light":
+    elif question == orig_questions[3]:
+        if final_answer == answers[10]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -239,8 +123,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "Who Tyler Derden from the 'Fight Club' was?":
-        if final_answer == "The second personality of the main character":
+    elif question == orig_questions[4]:
+        if final_answer == answers[14]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -250,8 +134,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "What's name of main character in 'Metro' cycle of Dmitriy Gluhovskiy":
-        if final_answer == "Artyom":
+    elif question == orig_questions[5]:
+        if final_answer == answers[16]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -261,8 +145,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "Which of the gods do serve faceless from 'Song of Ice and Fire'?":
-        if final_answer == "Many-Faced God":
+    elif question == orig_questions[6]:
+        if final_answer == answers[20]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -272,8 +156,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "What's name of the main character Stephen King's 'Dark Tower'?":
-        if final_answer == "Roland":
+    elif question == orig_questions[7]:
+        if final_answer == answers[21]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -283,64 +167,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "What's name of 'Witcher's' monster, that can transform into different appearances?":
-        if final_answer == "Doppler":
-            $ correct_answer = True
-            if first_try:
-                if not anticheat:
-                    $ mp.right_answers += 1
-                    $ mp.save()
-            $ final_answer = True
-            return
-        else:
-            $ first_try = False
-            return
-    elif question == "What monster was hidden in Hogwarts?":
-        if final_answer == "Basilisk":
-            $ correct_answer = True
-            if first_try:
-                if not anticheat:
-                    $ mp.right_answers += 1
-                    $ mp.save()
-            return
-        else:
-            $ first_try = False
-            return
-    elif question == "What's surname of 'Dead souls' main character?":
-        if final_answer == "Chichikov":
-            $ correct_answer = True
-            if first_try:
-                if not anticheat:
-                    $ mp.right_answers += 1
-                    $ mp.save()
-            return
-        else:
-            $ first_try = False
-            return
-    elif question == "How namy people did Raskolnikov killed?":
-        if final_answer == "2":
-            $ correct_answer = True
-            if first_try:
-                if not anticheat:
-                    $ mp.right_answers += 1
-                    $ mp.save()
-            return
-        else:
-            $ first_try = False
-            return
-    elif question == "Where do Ctulhu sleeps?":
-        if final_answer == "Pacific ocean":
-            $ correct_answer = True
-            if first_try:
-                if not anticheat:
-                    $ mp.right_answers += 1
-                    $ mp.save()
-            return
-        else:
-            $ first_try = False
-            return
-    elif question == "In which county do happen book series about Carlson?":
-        if final_answer == "Sweden":
+    elif question == orig_questions[8]:
+        if final_answer == answers[25]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -351,8 +179,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "What military conflict described in 'Gone by the wind'?":
-        if final_answer == "American civil war":
+    elif question == orig_questions[9]:
+        if final_answer == answers[28]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -362,8 +190,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "On which street did Sherlock Holmes lived?":
-        if final_answer == "Baker street":
+    elif question == orig_questions[10]:
+        if final_answer == answers[30]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -373,8 +201,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "What was Voland's cat name?":
-        if final_answer == "Behemoth":
+    elif question == orig_questions[11]:
+        if final_answer == answers[34]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -384,8 +212,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "What is Turgenev's novel called, where described generation's conflict?":
-        if final_answer == "Fathers and children":
+    elif question == orig_questions[12]:
+        if final_answer == answers[38]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -395,8 +223,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "How many main characters was in 'Three musketeers' novel?":
-        if final_answer == "Four":
+    elif question == orig_questions[13]:
+        if final_answer == answers[40]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -407,8 +235,64 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "What do Little Prince asked main character of eponymous book to draw?":
-        if final_answer == "Lamb":
+    elif question == orig_questions[14]:
+        if final_answer == answers[42]:
+            $ correct_answer = True
+            if first_try:
+                if not anticheat:
+                    $ mp.right_answers += 1
+                    $ mp.save()
+            return
+        else:
+            $ first_try = False
+            return
+    elif question == orig_questions[15]:
+        if final_answer == answers[47]:
+            $ correct_answer = True
+            if first_try:
+                if not anticheat:
+                    $ mp.right_answers += 1
+                    $ mp.save()
+            return
+        else:
+            $ first_try = False
+            return
+    elif question == orig_questions[16]:
+        if final_answer == answers[49]:
+            $ correct_answer = True
+            if first_try:
+                if not anticheat:
+                    $ mp.right_answers += 1
+                    $ mp.save()
+            return
+        else:
+            $ first_try = False
+            return
+    elif question == orig_questions[17]:
+        if final_answer == answers[52]:
+            $ correct_answer = True
+            if first_try:
+                if not anticheat:
+                    $ mp.right_answers += 1
+                    $ mp.save()
+            return
+        else:
+            $ first_try = False
+            return
+    elif question == orig_questions[18]:
+        if final_answer == answers[54]:
+            $ correct_answer = True
+            if first_try:
+                if not anticheat:
+                    $ mp.right_answers += 1
+                    $ mp.save()
+            $ final_answer = True
+            return
+        else:
+            $ first_try = False
+            return
+    elif question == orig_questions[19]:
+        if final_answer == answers[59]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:

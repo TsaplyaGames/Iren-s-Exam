@@ -1,8 +1,19 @@
 init 1 python:  
     
-    final_answer = False
-    correct_answer = False
-    first_try = True
+    orig_questions = ["На каких птицах хоббиты вернулись обратно с роковой горы?", "Кто похищал детей в 'Оно' Стивена Кинга?", "Какое прозвище имел Барбридж из Пикника на обочине?",
+                      "На какой стороне был Антон Городецкий?", "Кем являлся Тайлер Дёрден из Бойцовского Клуба?", "Как звали главного героя в цикле Метро Дмитрия Глуховского?",
+                      "Кому из богов служат безликие из Песни Льда и Огня?", "Как звали главного героя в книге Тёмная Башня Стивена Кинга?", "Как звали монстра из ведьмака, который мог принимать различные облики?",
+                      "Какое чудовище было скрыто в Хогвартсе?", "Какова фамилия главного героя 'Мёртвых душ?'", "Скольких человек убил Раскольников?", 
+                      "Где спит Ктулху?", "В какой стране происходят действия серии книг о Карлсоне?", "Какой военный конфликт описан в книге 'Унесённые ветром'?",
+                      "На какой улице жил Шерлок Холмс?", "Как звали кота Воланда?", "Как называется роман Тургенева, в котором описывается конфликт поколений?",
+                      "Сколько основных персонажей в романе Дюма 'Три мушкетёра'?", "Что просил Маленький Принц нарисовать главного героя книги 'Маленький Принц'?"]
+                      
+    answers = ["Ястребах", "Орлах", "Попугаях", "Акробат", "Фокусник", "Клоун", "Стервятник", "Гриф", "Кондор", "Тёмной", "Светлой", "Сумеречной", "Галлюцинацией",
+               "Реальным человеком", "Второй личностью главного героя", "Артур", "Артём", "Андрей", "Рглору", "Семерым", "Многоликому", "Роланд", "Ральф", "Ричард",
+               "Мимик", "Допплер", "Ракшаса", "Анаконда", "Василиск", "Кассава", "Чичиков", "Апраскин", "Карамазов", "1", "2", "3", "Средиземное море", "Озеро Лохнесс",
+               "Тихий океан", "Россия", "Швеция", "Исландия", "Гражданская война в Америке", "Война за независимость", "Вторая мировая война", "Оксфорд-стрит",
+               "Пикадилли", "Бейкер-стрит", "Барсик", "Бегемот", "Слон", "Дворянское Гнездо", "Отцы и дети", "Дым", "Четыре", "Три", "Один", "Удава", "Слона",
+               "Барана"]
     
     reactions_on_correct_answer = ['Молодец', 'Какой ты умный...', 'Ммм... Молодец', 'Какой ты у меня начитанный...', 'Ничего себе! И это ты знаешь!', 'В точку!',
                                    'Тебя не проведёшь!', 'Так держать!', 'Отлично! Люблю начитанных...', 'А ты не промах!', 'Божественно!', 'Идеально'
@@ -12,100 +23,11 @@ init 1 python:
                                      'Ну это как можно не знать?', 'Ты серьёзно? Неправильно!', 'Начитанность - это не про тебя.', 
                                      'Ты знал, что девушки любят умных?', 'Ну ты даёшь...', 'Неужели тебе даже аудиокниги лень слушать?',
                                      'Ха-ха-ха… Ну и ну...', 'Я тебе для чего на день рождения книги дарю?', 'Такой большой, а мозг как у хлебушка...']
-    
-    def create_questions():
-        global questions
-        questions = []
-        questions.append("На каких птицах хоббиты вернулись обратно с роковой горы?")
-        questions.append("Кто похищал детей в 'Оно' Стивена Кинга?")
-        questions.append("Какое прозвище имел Барбридж из Пикника на обочине?")
-        questions.append("На какой стороне был Антон Городецкий?")
-        questions.append("Кем являлся Тайлер Дёрден из Бойцовского Клуба?")
-        questions.append("Как звали главного героя в цикле Метро Дмитрия Глуховского?")
-        questions.append("Кому из богов служат безликие из Песни Льда и Огня?")
-        questions.append("Как звали главного героя в книге Тёмная Башня Стивена Кинга?")
-        questions.append("Как звали монстра из ведьмака, который мог принимать различные облики?")
-        questions.append("Какое чудовище было скрыто в Хогвартсе?")
-        questions.append("Какова фамилия главного героя 'Мёртвых душ?'")
-        questions.append("Скольких человек убил Раскольников?")
-        questions.append("Где спит Ктулху?")
-        questions.append("В какой стране происходят действия серии книг о Карлсоне?")
-        questions.append("Какой военный конфликт описан в книге 'Унесённые ветром'?")
-        questions.append("На какой улице жил Шерлок Холмс?")
-        questions.append("Как звали кота Воланда?")
-        questions.append("Как называется роман Тургенева, в котором описывается конфликт поколений?")
-        questions.append("Сколько основных персонажей в романе Дюма 'Три мушкетёра'?")
-        questions.append("Что просил Маленький Принц нарисовать главного героя книги 'Маленький Принц'?")
-        
-    def create_answers():
-        global answers
-        answers = []
-        answers.append("Ястребах")
-        answers.append("Орлах")
-        answers.append("Попугаях")
-        answers.append("Акробат")
-        answers.append("Фокусник")
-        answers.append("Клоун")
-        answers.append("Стервятник")
-        answers.append("Гриф")
-        answers.append("Кондор")
-        answers.append("Тёмной")
-        answers.append("Светлой")
-        answers.append("Сумеречной")
-        answers.append("Галлюцинацией")
-        answers.append("Реальным человеком")
-        answers.append("Второй личностью главного героя")
-        answers.append("Артур")
-        answers.append("Артём")
-        answers.append("Андрей")
-        answers.append("Рглору")
-        answers.append("Семерым")
-        answers.append("Многоликому")
-        answers.append("Роланд")
-        answers.append("Ральф")
-        answers.append("Ричард")
-        answers.append("Мимик")
-        answers.append("Допплер")
-        answers.append("Ракшаса")
-        answers.append("Анаконда")
-        answers.append("Василиск")
-        answers.append("Кассава")
-        answers.append("Чичиков")
-        answers.append("Апраскин")
-        answers.append("Карамазов")
-        answers.append("1")
-        answers.append("2")
-        answers.append("3")
-        answers.append("Средиземное море")
-        answers.append("Озеро Лохнесс")
-        answers.append("Тихий океан")
-        answers.append("Россия")
-        answers.append("Швеция")
-        answers.append("Исландия")
-        answers.append("Гражданская война в Америке")
-        answers.append("Война за независимость")
-        answers.append("Вторая мировая война")
-        answers.append("Оксфорд-стрит")
-        answers.append("Пикадилли")
-        answers.append("Бейкер-стрит")
-        answers.append("Барсик")
-        answers.append("Бегемот")
-        answers.append("Слон")
-        answers.append("Дворянское Гнездо")
-        answers.append("Отцы и дети")
-        answers.append("Дым")
-        answers.append("Четыре")
-        answers.append("Три")
-        answers.append("Один")
-        answers.append("Удава")
-        answers.append("Слона")
-        answers.append("Барана")
-        
+                                     
     def choice_question():
         global questions
         global question
         question = renpy.random.choice(questions)
-        questions.remove(question)
         
     def choice_answers():
         global question
@@ -113,90 +35,50 @@ init 1 python:
         global answer1
         global answer2
         global answer3
-        if question == "На каких птицах хоббиты вернулись обратно с роковой горы?":
-            answer1 = answers[0]
-            answer2 = answers[1]
-            answer3 = answers[2]
-        elif question == "Кто похищал детей в 'Оно' Стивена Кинга?":
-            answer1 = answers[3]
-            answer2 = answers[4]
-            answer3 = answers[5]
-        elif question == "Какое прозвище имел Барбридж из Пикника на обочине?":
-            answer1 = answers[6]
-            answer2 = answers[7]
-            answer3 = answers[8]
-        elif question == "На какой стороне был Антон Городецкий?":
-            answer1 = answers[9]
-            answer2 = answers[10]
-            answer3 = answers[11]
-        elif question == "Кем являлся Тайлер Дёрден из Бойцовского Клуба?":
-            answer1 = answers[12]
-            answer2 = answers[13]
-            answer3 = answers[14]
-        elif question == "Как звали главного героя в цикле Метро Дмитрия Глуховского?":
-            answer1 = answers[15]
-            answer2 = answers[16]
-            answer3 = answers[17]
-        elif question == "Кому из богов служат безликие из Песни Льда и Огня?":
-            answer1 = answers[18]
-            answer2 = answers[19]
-            answer3 = answers[20]
-        elif question == "Как звали главного героя в книге Тёмная Башня Стивена Кинга?":
-            answer1 = answers[21]
-            answer2 = answers[22]
-            answer3 = answers[23]
-        elif question == "Как звали монстра из ведьмака, который мог принимать различные облики?":
-            answer1 = answers[24]
-            answer2 = answers[25]
-            answer3 = answers[26]
-        elif question == "Какое чудовище было скрыто в Хогвартсе?":
-            answer1 = answers[27]
-            answer2 = answers[28]
-            answer3 = answers[29]
-        elif question == "Какова фамилия главного героя 'Мёртвых душ'?":
-            answer1 = answers[30]
-            answer2 = answers[31]
-            answer3 = answers[32]
-        elif question == "Скольких человек убил Раскольников?":
-            answer1 = answers[33]
-            answer2 = answers[34]
-            answer3 = answers[35]
-        elif question == "Где спит Ктулху?":
-            answer1 = answers[36]
-            answer2 = answers[37]
-            answer3 = answers[38]
-        elif question == "В какой стране происходят действия серии книг о Карлсоне?":
-            answer1 = answers[39]
-            answer2 = answers[40]
-            answer3 = answers[41]
-        elif question == "Какой военный конфликт описан в книге 'Унесённые ветром'?":
-            answer1 = answers[42]
-            answer2 = answers[43]
-            answer3 = answers[44]
-        elif question == "На какой улице жил Шерлок Холмс?":
-            answer1 = answers[45]
-            answer2 = answers[46]
-            answer3 = answers[47]
-        elif question == "Как звали кота Воланда?":
-            answer1 = answers[48]
-            answer2 = answers[49]
-            answer3 = answers[50]
-        elif question == "Как называется роман Тургенева, в котором описывается конфликт поколений?":
-            answer1 = answers[51]
-            answer2 = answers[52]
-            answer3 = answers[53]
-        elif question == "Сколько основных персонажей в романе Дюма 'Три мушкетёра'?":
-            answer1 = answers[54]
-            answer2 = answers[55]
-            answer3 = answers[56]
-        elif question == "Что просил Маленький Принц нарисовать главного героя книги 'Маленький Принц'?":
-            answer1 = answers[57]
-            answer2 = answers[58]
-            answer3 = answers[59]
+        if question == orig_questions[0]:
+            answer1, answer2, answer3 = answers[0], answers[1], answers[2]
+        elif question == orig_questions[1]:
+            answer1, answer2, answer3 = answers[3], answers[4], answers[5]
+        elif question == orig_questions[2]:
+            answer1, answer2, answer3 = answers[6], answers[7], answers[8]
+        elif question == orig_questions[3]:
+            answer1, answer2, answer3 = answers[9], answers[10], answers[11]
+        elif question == orig_questions[4]:
+            answer1, answer2, answer3 = answers[12], answers[13], answers[14]
+        elif question == orig_questions[5]:
+            answer1, answer2, answer3 = answers[15], answers[16], answers[17]
+        elif question == orig_questions[6]:
+            answer1, answer2, answer3 = answers[18], answers[19], answers[20]
+        elif question == orig_questions[7]:
+            answer1, answer2, answer3 = answers[21], answers[22], answers[23]
+        elif question == orig_questions[8]:
+            answer1, answer2, answer3 = answers[24], answers[25], answers[26]
+        elif question == orig_questions[9]:
+            answer1, answer2, answer3 = answers[27], answers[28], answers[29]
+        elif question == orig_questions[10]:
+            answer1, answer2, answer3 = answers[30], answers[31], answers[32]
+        elif question == orig_questions[11]:
+            answer1, answer2, answer3 = answers[33], answers[34], answers[35]
+        elif question == orig_questions[12]:
+            answer1, answer2, answer3 = answers[36], answers[37], answers[38]
+        elif question == orig_questions[13]:
+            answer1, answer2, answer3 = answers[39], answers[40], answers[41]
+        elif question == orig_questions[14]:
+            answer1, answer2, answer3 = answers[42], answers[43], answers[44]
+        elif question == orig_questions[15]:
+            answer1, answer2, answer3 = answers[45], answers[46], answers[47]
+        elif question == orig_questions[16]:
+            answer1, answer2, answer3 = answers[48], answers[49], answers[50]
+        elif question == orig_questions[17]:
+            answer1, answer2, answer3 = answers[51], answers[52], answers[53]
+        elif question == orig_questions[18]:
+            answer1, answer2, answer3 = answers[54], answers[55], answers[56]
+        elif question == orig_questions[19]:
+            answer1, answer2, answer3 = answers[57], answers[58], answers[59]
             
 label check_answers:
-    if question == "На каких птицах хоббиты вернулись обратно с роковой горы?":
-        if final_answer == "Орлах":
+    if question == orig_questions[0]:
+        if final_answer == answers[1]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -206,8 +88,8 @@ label check_answers:
         else:
             $ first_try = False
             return 
-    elif question == "Кто похищал детей в 'Оно' Стивена Кинга?":
-        if final_answer == "Клоун":
+    elif question == orig_questions[1]:
+        if final_answer == answers[5]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -217,8 +99,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "Какое прозвище имел Барбридж из Пикника на обочине?":
-        if final_answer == "Стервятник":
+    elif question == orig_questions[2]:
+        if final_answer == answers[6]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -228,8 +110,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "На какой стороне был Антон Городецкий?":
-        if final_answer == "Светлой":
+    elif question == orig_questions[3]:
+        if final_answer == answers[10]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -239,8 +121,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "Кем являлся Тайлер Дёрден из Бойцовского Клуба?":
-        if final_answer == "Второй личностью главного героя":
+    elif question == orig_questions[4]:
+        if final_answer == answers[14]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -250,8 +132,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "Как звали главного героя в цикле Метро Дмитрия Глуховского?":
-        if final_answer == "Артём":
+    elif question == orig_questions[5]:
+        if final_answer == answers[16]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -261,8 +143,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "Кому из богов служат безликие из Песни Льда и Огня?":
-        if final_answer == "Многоликому":
+    elif question == orig_questions[6]:
+        if final_answer == answers[20]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -272,8 +154,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "Как звали главного героя в книге Тёмная Башня Стивена Кинга?":
-        if final_answer == "Роланд":
+    elif question == orig_questions[7]:
+        if final_answer == answers[21]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -283,64 +165,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "Как звали монстра из ведьмака, который мог принимать различные облики?":
-        if final_answer == "Допплер":
-            $ correct_answer = True
-            if first_try:
-                if not anticheat:
-                    $ mp.right_answers += 1
-                    $ mp.save()
-            $ final_answer = True
-            return
-        else:
-            $ first_try = False
-            return
-    elif question == "Какое чудовище было скрыто в Хогвартсе?":
-        if final_answer == "Василиск":
-            $ correct_answer = True
-            if first_try:
-                if not anticheat:
-                    $ mp.right_answers += 1
-                    $ mp.save()
-            return
-        else:
-            $ first_try = False
-            return
-    elif question == "Какова фамилия главного героя 'Мёртвых душ?'":
-        if final_answer == "Чичиков":
-            $ correct_answer = True
-            if first_try:
-                if not anticheat:
-                    $ mp.right_answers += 1
-                    $ mp.save()
-            return
-        else:
-            $ first_try = False
-            return
-    elif question == "Скольких человек убил Раскольников?":
-        if final_answer == "2":
-            $ correct_answer = True
-            if first_try:
-                if not anticheat:
-                    $ mp.right_answers += 1
-                    $ mp.save()
-            return
-        else:
-            $ first_try = False
-            return
-    elif question == "Где спит Ктулху?":
-        if final_answer == "Тихий океан":
-            $ correct_answer = True
-            if first_try:
-                if not anticheat:
-                    $ mp.right_answers += 1
-                    $ mp.save()
-            return
-        else:
-            $ first_try = False
-            return
-    elif question == "В какой стране происходят действия серии книг о Карлсоне?":
-        if final_answer == "Швеция":
+    elif question == orig_questions[8]:
+        if final_answer == answers[25]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -351,8 +177,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "Какой военный конфликт описан в книге 'Унесённые ветром'?":
-        if final_answer == "Гражданская война в Америке":
+    elif question == orig_questions[9]:
+        if final_answer == answers[28]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -362,8 +188,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "На какой улице жил Шерлок Холмс?":
-        if final_answer == "Бейкер-стрит":
+    elif question == orig_questions[10]:
+        if final_answer == answers[30]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -373,8 +199,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "Как звали кота Воланда?":
-        if final_answer == "Бегемот":
+    elif question == orig_questions[11]:
+        if final_answer == answers[34]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -384,8 +210,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "Как называется роман Тургенева, в котором описывается конфликт поколений?":
-        if final_answer == "Отцы и дети":
+    elif question == orig_questions[12]:
+        if final_answer == answers[38]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -395,8 +221,8 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "Сколько основных персонажей в романе Дюма 'Три мушкетёра'?":
-        if final_answer == "Четыре":
+    elif question == orig_questions[13]:
+        if final_answer == answers[40]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:
@@ -407,8 +233,64 @@ label check_answers:
         else:
             $ first_try = False
             return
-    elif question == "Что просил Маленький Принц нарисовать главного героя книги 'Маленький Принц'?":
-        if final_answer == "Барана":
+    elif question == orig_questions[14]:
+        if final_answer == answers[42]:
+            $ correct_answer = True
+            if first_try:
+                if not anticheat:
+                    $ mp.right_answers += 1
+                    $ mp.save()
+            return
+        else:
+            $ first_try = False
+            return
+    elif question == orig_questions[15]:
+        if final_answer == answers[47]:
+            $ correct_answer = True
+            if first_try:
+                if not anticheat:
+                    $ mp.right_answers += 1
+                    $ mp.save()
+            return
+        else:
+            $ first_try = False
+            return
+    elif question == orig_questions[16]:
+        if final_answer == answers[49]:
+            $ correct_answer = True
+            if first_try:
+                if not anticheat:
+                    $ mp.right_answers += 1
+                    $ mp.save()
+            return
+        else:
+            $ first_try = False
+            return
+    elif question == orig_questions[17]:
+        if final_answer == answers[52]:
+            $ correct_answer = True
+            if first_try:
+                if not anticheat:
+                    $ mp.right_answers += 1
+                    $ mp.save()
+            return
+        else:
+            $ first_try = False
+            return
+    elif question == orig_questions[18]:
+        if final_answer == answers[54]:
+            $ correct_answer = True
+            if first_try:
+                if not anticheat:
+                    $ mp.right_answers += 1
+                    $ mp.save()
+            $ final_answer = True
+            return
+        else:
+            $ first_try = False
+            return
+    elif question == orig_questions[19]:
+        if final_answer == answers[59]:
             $ correct_answer = True
             if first_try:
                 if not anticheat:

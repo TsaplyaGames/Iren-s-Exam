@@ -1,11 +1,7 @@
-﻿init 2:
+﻿label start:
+    call load_stuff
     $ irn = Character("Iren", who_color="#02d9c7")
     $ me = Character("[gg_name]", who_color="#33ff00")
-    
-label start:
-    $ anticheat = False
-    $ create_questions()
-    $ create_answers()
     $ mp.right_answers = 0
     $ mp.save()
     $ gg_name = renpy.input('Write name for gg')
@@ -27,7 +23,7 @@ label start:
     "Knowing Iren’s love to crazy things, I said:"
     me "Irene, Drop reading and take of your clothes!"
     irn "Right there?"
-    "Irene laughed"
+    "Irene laughed."
     me "If you remember, we had sex in the more strange places."
     irn "You are right, but..."
     me "What?"

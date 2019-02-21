@@ -1,11 +1,7 @@
-﻿init 2:
+﻿label start:
+    call load_stuff
     $ irn = Character("Ирен", who_color="#02d9c7")
     $ me = Character("[gg_name]", who_color="#33ff00")
-    
-label start:
-    $ anticheat = False
-    $ create_questions()
-    $ create_answers()
     $ mp.right_answers = 0
     $ mp.save()
     $ gg_name = renpy.input('Напишите имя для главного героя')
@@ -27,7 +23,7 @@ label start:
     "Памятуя о любви Ирен к разным сумасшествиям, я изрёк:"
     me "Ирен, бросай ты эту книгу и давай раздевайся!"
     irn "Прямо тут?"
-    "Ирен захихикала"
+    "Ирен захихикала."
     me "Если помнишь, то мы и не в таких местах занимались сексом."
     irn "Твоя правда, но..."
     me "Что?"
