@@ -37,46 +37,147 @@ init 1 python:
         global answer1
         global answer2
         global answer3
+        answers_scheme = renpy.random.randint(0, 2)
         if question == orig_questions[0]:
-            answer1, answer2, answer3 = answers[0], answers[1], answers[2]
+            if answers_scheme == 0:
+                answer1, answer2, answer3 = answers[0], answers[1], answers[2]
+            elif answers_scheme == 1:
+                answer1, answer2, answer3 = answers[2], answers[0], answers[1]
+            elif answers_scheme == 2:
+                answer1, answer2, answer3 = answers[1], answers[2], answers[0]
         elif question == orig_questions[1]:
-            answer1, answer2, answer3 = answers[3], answers[4], answers[5]
+            if answers_scheme == 0:
+                answer1, answer2, answer3 = answers[3], answers[4], answers[5]
+            elif answers_scheme == 1:
+                answer1, answer2, answer3 = answers[5], answers[4], answers[3]
+            elif answers_scheme == 2:
+                answer1, answer2, answer3 = answers[4], answers[5], answers[3]
         elif question == orig_questions[2]:
-            answer1, answer2, answer3 = answers[6], answers[7], answers[8]
+            if answers_scheme == 0:
+                answer1, answer2, answer3 = answers[6], answers[7], answers[8]
+            elif answers_scheme == 1:
+                answer1, answer2, answer3 = answers[8], answers[7], answers[6]
+            elif answers_scheme == 2:
+                answer1, answer2, answer3 = answers[7], answers[8], answers[6]
         elif question == orig_questions[3]:
-            answer1, answer2, answer3 = answers[9], answers[10], answers[11]
+            if answers_scheme == 0:
+                answer1, answer2, answer3 = answers[9], answers[10], answers[11]
+            elif answers_scheme == 1:
+                answer1, answer2, answer3 = answers[11], answers[10], answers[9]
+            elif answers_scheme == 2:
+                answer1, answer2, answer3 = answers[10], answers[11], answers[9]
         elif question == orig_questions[4]:
-            answer1, answer2, answer3 = answers[12], answers[13], answers[14]
+            if answers_scheme == 0:
+                answer1, answer2, answer3 = answers[12], answers[13], answers[14]
+            elif answers_scheme == 1:
+                answer1, answer2, answer3 = answers[14], answers[13], answers[12]
+            elif answers_scheme == 2:
+                answer1, answer2, answer3 = answers[13], answers[14], answers[12]
         elif question == orig_questions[5]:
-            answer1, answer2, answer3 = answers[15], answers[16], answers[17]
+            if answers_scheme == 0:
+                answer1, answer2, answer3 = answers[15], answers[16], answers[17]
+            elif answers_scheme == 1:
+                answer1, answer2, answer3 = answers[17], answers[16], answers[15]
+            elif answers_scheme == 2:
+                answer1, answer2, answer3 = answers[16], answers[17], answers[15]
         elif question == orig_questions[6]:
-            answer1, answer2, answer3 = answers[18], answers[19], answers[20]
+            if answers_scheme == 0:
+                answer1, answer2, answer3 = answers[18], answers[19], answers[20]
+            elif answers_scheme == 1:
+                answer1, answer2, answer3 = answers[20], answers[19], answers[18]
+            elif answers_scheme == 2:
+                answer1, answer2, answer3 = answers[19], answers[20], answers[18]
         elif question == orig_questions[7]:
-            answer1, answer2, answer3 = answers[21], answers[22], answers[23]
+            if answers_scheme == 0:
+                answer1, answer2, answer3 = answers[21], answers[22], answers[23]
+            elif answers_scheme == 1:
+                answer1, answer2, answer3 = answers[23], answers[22], answers[21]
+            elif answers_scheme == 2:
+                answer1, answer2, answer3 = answers[22], answers[23], answers[21]
         elif question == orig_questions[8]:
-            answer1, answer2, answer3 = answers[24], answers[25], answers[26]
+            if answers_scheme == 0:
+                answer1, answer2, answer3 = answers[24], answers[25], answers[26]
+            elif answers_scheme == 1:
+                answer1, answer2, answer3 = answers[26], answers[25], answers[24]
+            elif answers_scheme == 2:
+                answer1, answer2, answer3 = answers[25], answers[26], answers[24]
         elif question == orig_questions[9]:
-            answer1, answer2, answer3 = answers[27], answers[28], answers[29]
+            if answers_scheme == 0:
+                answer1, answer2, answer3 = answers[27], answers[28], answers[29]
+            elif answers_scheme == 1:
+                answer1, answer2, answer3 = answers[29], answers[28], answers[27]
+            elif answers_scheme == 2:
+                answer1, answer2, answer3 = answers[28], answers[29], answers[27]
         elif question == orig_questions[10]:
-            answer1, answer2, answer3 = answers[30], answers[31], answers[32]
+            if answers_scheme == 0:
+                answer1, answer2, answer3 = answers[30], answers[31], answers[32]
+            elif answers_scheme == 1:
+                answer1, answer2, answer3 = answers[32], answers[31], answers[30]
+            elif answers_scheme == 2:
+                answer1, answer2, answer3 = answers[31], answers[32], answers[30]
         elif question == orig_questions[11]:
-            answer1, answer2, answer3 = answers[33], answers[34], answers[35]
+            if answers_scheme == 0:
+                answer1, answer2, answer3 = answers[33], answers[34], answers[35]
+            elif answers_scheme == 1:
+                answer1, answer2, answer3 = answers[35], answers[34], answers[33]
+            elif answers_scheme == 2:
+                answer1, answer2, answer3 = answers[34], answers[35], answers[33]
         elif question == orig_questions[12]:
-            answer1, answer2, answer3 = answers[36], answers[37], answers[38]
+            if answers_scheme == 0:
+                answer1, answer2, answer3 = answers[36], answers[37], answers[38]
+            elif answers_scheme == 1:
+                answer1, answer2, answer3 = answers[38], answers[37], answers[36]
+            elif answers_scheme == 2:
+                answer1, answer2, answer3 = answers[37], answers[38], answers[36]
         elif question == orig_questions[13]:
-            answer1, answer2, answer3 = answers[39], answers[40], answers[41]
+            if answers_scheme == 0:
+                answer1, answer2, answer3 = answers[39], answers[40], answers[41]
+            elif answers_scheme == 1:
+                answer1, answer2, answer3 = answers[41], answers[40], answers[39]
+            elif answers_scheme == 2:
+                answer1, answer2, answer3 = answers[40], answers[41], answers[39]
         elif question == orig_questions[14]:
-            answer1, answer2, answer3 = answers[42], answers[43], answers[44]
+            if answers_scheme == 0:
+                answer1, answer2, answer3 = answers[42], answers[43], answers[44]
+            elif answers_scheme == 1:
+                answer1, answer2, answer3 = answers[44], answers[43], answers[42]
+            elif answers_scheme == 2:
+                answer1, answer2, answer3 = answers[43], answers[44], answers[42]
         elif question == orig_questions[15]:
-            answer1, answer2, answer3 = answers[45], answers[46], answers[47]
+            if answers_scheme == 0:
+                answer1, answer2, answer3 = answers[45], answers[46], answers[47]
+            elif answers_scheme == 1:
+                answer1, answer2, answer3 = answers[47], answers[46], answers[45]
+            elif answers_scheme == 2:
+                answer1, answer2, answer3 = answers[46], answers[47], answers[45]
         elif question == orig_questions[16]:
-            answer1, answer2, answer3 = answers[48], answers[49], answers[50]
+            if answers_scheme == 0:
+                answer1, answer2, answer3 = answers[48], answers[49], answers[50]
+            elif answers_scheme == 1:
+                answer1, answer2, answer3 = answers[50], answers[49], answers[48]
+            elif answers_scheme == 2:
+                answer1, answer2, answer3 = answers[49], answers[50], answers[48]
         elif question == orig_questions[17]:
-            answer1, answer2, answer3 = answers[51], answers[52], answers[53]
+            if answers_scheme == 0:
+                answer1, answer2, answer3 = answers[51], answers[52], answers[53]
+            elif answers_scheme == 1:
+                answer1, answer2, answer3 = answers[53], answers[52], answers[51]
+            elif answers_scheme == 2:
+                answer1, answer2, answer3 = answers[52], answers[53], answers[51]
         elif question == orig_questions[18]:
-            answer1, answer2, answer3 = answers[54], answers[55], answers[56]
+            if answers_scheme == 0:
+                answer1, answer2, answer3 = answers[54], answers[55], answers[56]
+            elif answers_scheme == 1:
+                answer1, answer2, answer3 = answers[56], answers[55], answers[54]
+            elif answers_scheme == 2:
+                answer1, answer2, answer3 = answers[55], answers[56], answers[54]
         elif question == orig_questions[19]:
-            answer1, answer2, answer3 = answers[57], answers[58], answers[59]
+            if answers_scheme == 0:
+                answer1, answer2, answer3 = answers[57], answers[58], answers[59]
+            elif answers_scheme == 1:
+                answer1, answer2, answer3 = answers[59], answers[58], answers[57]
+            elif answers_scheme == 2:
+                answer1, answer2, answer3 = answers[58], answers[59], answers[57]
             
 label check_answers:
     if question == orig_questions[0]:

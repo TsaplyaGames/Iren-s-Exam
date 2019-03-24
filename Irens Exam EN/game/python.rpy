@@ -23,4 +23,5 @@ label load_stuff:
     $ correct_answer = False
     $ first_try = True
     $ anticheat = False
+    $ answers_scheme = 0
     return
