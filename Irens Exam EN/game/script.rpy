@@ -46,6 +46,7 @@ label first_pack_of_questions_first_part:
     if first_try:
         $ choice_question()
         "[question]"
+        $ stats_questions_answers(1)
         $ choice_answers()
     else:
         $ bad_reaction = renpy.random.choice(reactions_on_incorrect_answer)
@@ -85,6 +86,7 @@ label first_pack_of_questions_second_part:
     if first_try:
         $ choice_question()
         "[question]"
+        $ stats_questions_answers(2)
         $ choice_answers()
     else:
         $ bad_reaction = renpy.random.choice(reactions_on_incorrect_answer)
@@ -124,6 +126,7 @@ label second_pack_of_questions_first_part:
     if first_try:
         $ choice_question()
         "[question]"
+        $ stats_questions_answers(3)
         $ choice_answers()
     else:
         $ bad_reaction = renpy.random.choice(reactions_on_incorrect_answer)
@@ -163,6 +166,7 @@ label second_pack_of_questions_second_part:
     if first_try:
         $ choice_question()
         "[question]"
+        $ stats_questions_answers(4)
         $ choice_answers()
     else:
         $ bad_reaction = renpy.random.choice(reactions_on_incorrect_answer)
@@ -202,6 +206,7 @@ label third_pack_of_questions_first_part:
     if first_try:
         $ choice_question()
         "[question]"
+        $ stats_questions_answers(5)
         $ choice_answers()
     else:
         $ bad_reaction = renpy.random.choice(reactions_on_incorrect_answer)
@@ -241,6 +246,7 @@ label third_pack_of_questions_second_part:
     if first_try:
         $ choice_question()
         "[question]"
+        $ stats_questions_answers(6)
         $ choice_answers()
     else:
         $ bad_reaction = renpy.random.choice(reactions_on_incorrect_answer)
@@ -280,6 +286,7 @@ label fourth_pack_of_questions_first_part:
     if first_try:
         $ choice_question()
         "[question]"
+        $ stats_questions_answers(7)
         $ choice_answers()
     else:
         $ bad_reaction = renpy.random.choice(reactions_on_incorrect_answer)
@@ -319,6 +326,7 @@ label fourth_pack_of_questions_second_part:
     if first_try:   
         $ choice_question()
         "[question]"
+        $ stats_questions_answers(8)
         $ choice_answers()
     else:
         $ bad_reaction = renpy.random.choice(reactions_on_incorrect_answer)

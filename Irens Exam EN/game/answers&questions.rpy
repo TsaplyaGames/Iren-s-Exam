@@ -179,6 +179,361 @@ init 1 python:
             elif answers_scheme == 2:
                 answer1, answer2, answer3 = answers[58], answers[59], answers[57]
             
+    def stats_questions_answers(num_question):
+        global question
+        global stat_question1
+        global stat_question2
+        global stat_question3
+        global stat_question4
+        global stat_question5
+        global stat_question6
+        global stat_question7
+        global stat_question8
+        global stat_answer1
+        global stat_answer2
+        global stat_answer3
+        global stat_answer4
+        global stat_answer5
+        global stat_answer6
+        global stat_answer7
+        global stat_answer8
+        if num_question == 1:
+            stat_question1 = question
+            if question == orig_questions[0]:
+                stat_answer1 = answers[1]
+            elif question == orig_questions[1]:
+                stat_answer1 = answers[5]
+            elif question == orig_questions[2]:
+                stat_answer1 = answers[6]
+            elif question == orig_questions[3]:
+                stat_answer1 = answers[10]
+            elif question == orig_questions[4]:
+                stat_answer1 = answers[14]
+            elif question == orig_questions[5]:
+                stat_answer1 = answers[16]
+            elif question == orig_questions[6]:
+                stat_answer1 = answers[20]
+            elif question == orig_questions[7]:
+                stat_answer1 = answers[21]
+            elif question == orig_questions[8]:
+                stat_answer1 = answers[25]
+            elif question == orig_questions[9]:
+                stat_answer1 = answers[28]
+            elif question == orig_questions[10]:
+                stat_answer1 = answers[30]
+            elif question == orig_questions[11]:
+                stat_answer1 = answers[34]
+            elif question == orig_questions[12]:
+                stat_answer1 = answers[38]
+            elif question == orig_questions[13]:
+                stat_answer1 = answers[40]
+            elif question == orig_questions[14]: 
+                stat_answer1 = answers[42]
+            elif question == orig_questions[15]:
+                stat_answer1 = answers[47]
+            elif question == orig_questions[16]:
+                stat_answer1 = answers[49]
+            elif question == orig_questions[17]:
+                stat_answer1 = answers[52]
+            elif question == orig_questions[18]:
+                stat_answer1 = answers[54]
+            elif question == orig_questions[19]:
+                stat_answer1 = answers[59]
+        elif num_question == 2:
+            stat_question2 = question
+            if question == orig_questions[0]:
+                stat_answer2 = answers[1]
+            elif question == orig_questions[1]:
+                stat_answer2 = answers[5]
+            elif question == orig_questions[2]:
+                stat_answer2 = answers[6]
+            elif question == orig_questions[3]:
+                stat_answer2 = answers[10]
+            elif question == orig_questions[4]:
+                stat_answer2 = answers[14]
+            elif question == orig_questions[5]:
+                stat_answer2 = answers[16]
+            elif question == orig_questions[6]:
+                stat_answer2 = answers[20]
+            elif question == orig_questions[7]:
+                stat_answer2 = answers[21]
+            elif question == orig_questions[8]:
+                stat_answer2 = answers[25]
+            elif question == orig_questions[9]:
+                stat_answer2 = answers[28]
+            elif question == orig_questions[10]:
+                stat_answer2 = answers[30]
+            elif question == orig_questions[11]:
+                stat_answer2 = answers[34]
+            elif question == orig_questions[12]:
+                stat_answer2 = answers[38]
+            elif question == orig_questions[13]:
+                stat_answer2 = answers[40]
+            elif question == orig_questions[14]: 
+                stat_answer2 = answers[42]
+            elif question == orig_questions[15]:
+                stat_answer2 = answers[47]
+            elif question == orig_questions[16]:
+                stat_answer2 = answers[49]
+            elif question == orig_questions[17]:
+                stat_answer2 = answers[52]
+            elif question == orig_questions[18]:
+                stat_answer2 = answers[54]
+            elif question == orig_questions[19]:
+                stat_answer2 = answers[59]
+        elif num_question == 3:
+            stat_question3 = question
+            if question == orig_questions[0]:
+                stat_answer3 = answers[1]
+            elif question == orig_questions[1]:
+                stat_answer3 = answers[5]
+            elif question == orig_questions[2]:
+                stat_answer3 = answers[6]
+            elif question == orig_questions[3]:
+                stat_answer3 = answers[10]
+            elif question == orig_questions[4]:
+                stat_answer3 = answers[14]
+            elif question == orig_questions[5]:
+                stat_answer3 = answers[16]
+            elif question == orig_questions[6]:
+                stat_answer3 = answers[20]
+            elif question == orig_questions[7]:
+                stat_answer3 = answers[21]
+            elif question == orig_questions[8]:
+                stat_answer3 = answers[25]
+            elif question == orig_questions[9]:
+                stat_answer3 = answers[28]
+            elif question == orig_questions[10]:
+                stat_answer3 = answers[30]
+            elif question == orig_questions[11]:
+                stat_answer3 = answers[34]
+            elif question == orig_questions[12]:
+                stat_answer3 = answers[38]
+            elif question == orig_questions[13]:
+                stat_answer3 = answers[40]
+            elif question == orig_questions[14]: 
+                stat_answer3 = answers[42]
+            elif question == orig_questions[15]:
+                stat_answer3 = answers[47]
+            elif question == orig_questions[16]:
+                stat_answer3 = answers[49]
+            elif question == orig_questions[17]:
+                stat_answer3 = answers[52]
+            elif question == orig_questions[18]:
+                stat_answer3 = answers[54]
+            elif question == orig_questions[19]:
+                stat_answer3 = answers[59]
+        elif num_question == 4: 
+            stat_question4 = question
+            if question == orig_questions[0]:
+                stat_answer4 = answers[1]
+            elif question == orig_questions[1]:
+                stat_answer4 = answers[5]
+            elif question == orig_questions[2]:
+                stat_answer4 = answers[6]
+            elif question == orig_questions[3]:
+                stat_answer4 = answers[10]
+            elif question == orig_questions[4]:
+                stat_answer4 = answers[14]
+            elif question == orig_questions[5]:
+                stat_answer4 = answers[16]
+            elif question == orig_questions[6]:
+                stat_answer4 = answers[20]
+            elif question == orig_questions[7]:
+                stat_answer4 = answers[21]
+            elif question == orig_questions[8]:
+                stat_answer4 = answers[25]
+            elif question == orig_questions[9]:
+                stat_answer4 = answers[28]
+            elif question == orig_questions[10]:
+                stat_answer4 = answers[30]
+            elif question == orig_questions[11]:
+                stat_answer4 = answers[34]
+            elif question == orig_questions[12]:
+                stat_answer4 = answers[38]
+            elif question == orig_questions[13]:
+                stat_answer4 = answers[40]
+            elif question == orig_questions[14]: 
+                stat_answer4 = answers[42]
+            elif question == orig_questions[15]:
+                stat_answer4 = answers[47]
+            elif question == orig_questions[16]:
+                stat_answer4 = answers[49]
+            elif question == orig_questions[17]:
+                stat_answer4 = answers[52]
+            elif question == orig_questions[18]:
+                stat_answer4 = answers[54]
+            elif question == orig_questions[19]:
+                stat_answer4 = answers[59]
+        elif num_question == 5:
+            stat_question5 = question
+            if question == orig_questions[0]:
+                stat_answer5 = answers[1]
+            elif question == orig_questions[1]:
+                stat_answer5 = answers[5]
+            elif question == orig_questions[2]:
+                stat_answer5 = answers[6]
+            elif question == orig_questions[3]:
+                stat_answer5 = answers[10]
+            elif question == orig_questions[4]:
+                stat_answer5 = answers[14]
+            elif question == orig_questions[5]:
+                stat_answer5 = answers[16]
+            elif question == orig_questions[6]:
+                stat_answer5 = answers[20]
+            elif question == orig_questions[7]:
+                stat_answer5 = answers[21]
+            elif question == orig_questions[8]:
+                stat_answer5 = answers[25]
+            elif question == orig_questions[9]:
+                stat_answer5 = answers[28]
+            elif question == orig_questions[10]:
+                stat_answer5 = answers[30]
+            elif question == orig_questions[11]:
+                stat_answer5 = answers[34]
+            elif question == orig_questions[12]:
+                stat_answer5 = answers[38]
+            elif question == orig_questions[13]:
+                stat_answer5 = answers[40]
+            elif question == orig_questions[14]: 
+                stat_answer5 = answers[42]
+            elif question == orig_questions[15]:
+                stat_answer5 = answers[47]
+            elif question == orig_questions[16]:
+                stat_answer5 = answers[49]
+            elif question == orig_questions[17]:
+                stat_answer5 = answers[52]
+            elif question == orig_questions[18]:
+                stat_answer5 = answers[54]
+            elif question == orig_questions[19]:
+                stat_answer5 = answers[59]
+        elif num_question == 6:
+            stat_question6 = question
+            if question == orig_questions[0]:
+                stat_answer6 = answers[1]
+            elif question == orig_questions[1]:
+                stat_answer6 = answers[5]
+            elif question == orig_questions[2]:
+                stat_answer6 = answers[6]
+            elif question == orig_questions[3]:
+                stat_answer6 = answers[10]
+            elif question == orig_questions[4]:
+                stat_answer6 = answers[14]
+            elif question == orig_questions[5]:
+                stat_answer6 = answers[16]
+            elif question == orig_questions[6]:
+                stat_answer6 = answers[20]
+            elif question == orig_questions[7]:
+                stat_answer6 = answers[21]
+            elif question == orig_questions[8]:
+                stat_answer6 = answers[25]
+            elif question == orig_questions[9]:
+                stat_answer6 = answers[28]
+            elif question == orig_questions[10]:
+                stat_answer6 = answers[30]
+            elif question == orig_questions[11]:
+                stat_answer6 = answers[34]
+            elif question == orig_questions[12]:
+                stat_answer6 = answers[38]
+            elif question == orig_questions[13]:
+                stat_answer6 = answers[40]
+            elif question == orig_questions[14]: 
+                stat_answer6 = answers[42]
+            elif question == orig_questions[15]:
+                stat_answer6 = answers[47]
+            elif question == orig_questions[16]:
+                stat_answer6 = answers[49]
+            elif question == orig_questions[17]:
+                stat_answer6 = answers[52]
+            elif question == orig_questions[18]:
+                stat_answer6 = answers[54]
+            elif question == orig_questions[19]:
+                stat_answer6 = answers[59]
+        elif num_question == 7:
+            stat_question7 = question
+            if question == orig_questions[0]:
+                stat_answer7 = answers[1]
+            elif question == orig_questions[1]:
+                stat_answer7 = answers[5]
+            elif question == orig_questions[2]:
+                stat_answer7 = answers[6]
+            elif question == orig_questions[3]:
+                stat_answer7 = answers[10]
+            elif question == orig_questions[4]:
+                stat_answer7 = answers[14]
+            elif question == orig_questions[5]:
+                stat_answer7 = answers[16]
+            elif question == orig_questions[6]:
+                stat_answer7 = answers[20]
+            elif question == orig_questions[7]:
+                stat_answer7 = answers[21]
+            elif question == orig_questions[8]:
+                stat_answer7 = answers[25]
+            elif question == orig_questions[9]:
+                stat_answer7 = answers[28]
+            elif question == orig_questions[10]:
+                stat_answer7 = answers[30]
+            elif question == orig_questions[11]:
+                stat_answer7 = answers[34]
+            elif question == orig_questions[12]:
+                stat_answer7 = answers[38]
+            elif question == orig_questions[13]:
+                stat_answer7 = answers[40]
+            elif question == orig_questions[14]: 
+                stat_answer7 = answers[42]
+            elif question == orig_questions[15]:
+                stat_answer7 = answers[47]
+            elif question == orig_questions[16]:
+                stat_answer7 = answers[49]
+            elif question == orig_questions[17]:
+                stat_answer7 = answers[52]
+            elif question == orig_questions[18]:
+                stat_answer7 = answers[54]
+            elif question == orig_questions[19]:
+                stat_answer7 = answers[59]
+        elif num_question == 8:
+            stat_question8 = question
+            if question == orig_questions[0]:
+                stat_answer8 = answers[1]
+            elif question == orig_questions[1]:
+                stat_answer8 = answers[5]
+            elif question == orig_questions[2]:
+                stat_answer8 = answers[6]
+            elif question == orig_questions[3]:
+                stat_answer8 = answers[10]
+            elif question == orig_questions[4]:
+                stat_answer8 = answers[14]
+            elif question == orig_questions[5]:
+                stat_answer8 = answers[16]
+            elif question == orig_questions[6]:
+                stat_answer8 = answers[20]
+            elif question == orig_questions[7]:
+                stat_answer8 = answers[21]
+            elif question == orig_questions[8]:
+                stat_answer8 = answers[25]
+            elif question == orig_questions[9]:
+                stat_answer8 = answers[28]
+            elif question == orig_questions[10]:
+                stat_answer8 = answers[30]
+            elif question == orig_questions[11]:
+                stat_answer8 = answers[34]
+            elif question == orig_questions[12]:
+                stat_answer8 = answers[38]
+            elif question == orig_questions[13]:
+                stat_answer8 = answers[40]
+            elif question == orig_questions[14]: 
+                stat_answer8 = answers[42]
+            elif question == orig_questions[15]:
+                stat_answer8 = answers[47]
+            elif question == orig_questions[16]:
+                stat_answer8 = answers[49]
+            elif question == orig_questions[17]:
+                stat_answer8 = answers[52]
+            elif question == orig_questions[18]:
+                stat_answer8 = answers[54]
+            elif question == orig_questions[19]:
+                stat_answer8 = answers[59]
+                
 label check_answers:
     if question == orig_questions[0]:
         if final_answer == answers[1]:
